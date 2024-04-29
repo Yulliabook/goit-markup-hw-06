@@ -828,6 +828,28 @@ textarea::placeholder {
   .container {
     max-width: 768px;
   }
+  .logo {
+    margin-right: 120px;
+  }
+  .header-list {
+    display: flex;
+  }
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: end;
+  }
+  .address-item-link {
+    font-size: 12px;
+    padding: 0;
+  }
+  .header-button {
+    display: none;
+  }
+  .mob-menu {
+    display: none;
+  }
   .hero {
     background-image: linear-gradient(
         to bottom,
@@ -912,6 +934,18 @@ textarea::placeholder {
   .container {
     max-width: 1158px;
     padding: 0 15px;
+  }
+  .header-list {
+    display: flex;
+  }
+  .address-list {
+    display: flex;
+  }
+  .header-button {
+    display: none;
+  }
+  .mob-menu {
+    display: none;
   }
   .hero {
     background-image: linear-gradient(
