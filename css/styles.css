@@ -4,7 +4,6 @@ body {
   background: #fff;
   color: #434455;
 }
-
 *,
 *::before,
 *::after {
@@ -301,7 +300,6 @@ img {
   gap: 72px;
   text-align: center;
 }
-
 .benefits-list-title {
   text-transform: capitalize;
   font-weight: 500;
