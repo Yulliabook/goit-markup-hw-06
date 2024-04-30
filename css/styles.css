@@ -60,7 +60,8 @@ img {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-right: 76px;
-  padding: 24px 0;
+  /* padding: 24px 0; */
+  padding: 16px 0;
   display: block;
 }
 .logo .logo-studio {
@@ -74,7 +75,7 @@ img {
 .mob-menu {
   width: 100%;
   height: 100%;
-  padding: 0 16px;
+  padding: 72px 16px 40px;
   position: fixed;
   top: 0;
   background-color: #fff;
@@ -87,9 +88,6 @@ img {
   pointer-events: none;
 }
 
-.mob-list {
-  margin-top: 72px;
-}
 .mob-nav {
   font-weight: 700;
   font-size: 36px;
@@ -99,6 +97,9 @@ img {
 }
 .mob-nav-link {
   color: #2e2f42;
+}
+.mob-nav:first-child .mob-nav-link {
+  color: #404bbf;
 }
 .mob-nav-link:hover,
 .mob-nav-link:focus {
@@ -121,19 +122,20 @@ img {
   text-decoration: unset;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.mob-address-item:first-child .mob-address-link {
+  color: #404bbf;
+}
 .mob-item-link:hover {
   color: #404bbf;
 }
 .mob-item-link:focus {
   color: #404bbf;
 }
-.mob-icons {
-  margin: 40px auto;
-}
+
 .mob-icons-list {
   display: flex;
-  justify-content: center;
   gap: 40px;
+  margin: 40px auto 0;
 }
 .header-nav-link {
   font-weight: 500;
@@ -215,9 +217,9 @@ img {
   color: #404bbf;
 }
 .hero {
+  padding: 72px 0;
+  max-width: 320px;
   background: #2e2f42;
-  padding: 188px 0;
-  max-width: 1440px;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
@@ -246,12 +248,12 @@ img {
 .hero-title {
   text-align: center;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 .hero-button {
   border-radius: 4px;
@@ -278,7 +280,7 @@ img {
   background-color: #404bbf;
 }
 .benefits {
-  padding: 96px 16px;
+  padding: 96px 0px;
 }
 .visually-hidden {
   position: absolute;
@@ -298,16 +300,16 @@ img {
   align-items: center;
   justify-content: center;
   gap: 72px;
-  text-align: center;
 }
 .benefits-list-title {
   text-transform: capitalize;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 36px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
+  text-align: center;
 }
 .benefits-list-text {
   font-weight: 400;
@@ -315,6 +317,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: left;
 }
 
 .benefits-list-icon {
@@ -408,9 +411,7 @@ img {
   fill: #f4f4fd;
 }
 .portfolio {
-  margin-top: 0;
-  margin-bottom: 96px;
-  padding-top: 96px;
+  padding: 96px 0;
 }
 
 .portfolio-list {
@@ -420,9 +421,6 @@ img {
   row-gap: 48px;
 }
 .portfolio-item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.portfolio-item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -482,6 +480,7 @@ img {
 
 .footer {
   background: #2e2f42;
+  padding: 96px 15px;
 }
 footer .container {
   display: flex;
@@ -489,10 +488,10 @@ footer .container {
   justify-content: center;
   flex-direction: column;
   gap: 72px;
-  padding: 96px 15px;
 }
 
 footer .logo {
+  padding: 0;
   margin-right: 0;
   text-align: center;
   margin-bottom: 16px;
@@ -564,7 +563,8 @@ button {
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+
+  width: 280px;
   height: 40px;
   font-size: 12px;
   line-height: 2;
@@ -605,8 +605,9 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 320px;
+  height: 640px;
+
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -623,14 +624,15 @@ button {
   pointer-events: all;
 }
 .model {
+  width: 288px;
+  height: 623px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
-  width: 408px;
-  min-height: 584px;
+
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
@@ -743,6 +745,7 @@ textarea::placeholder {
 .input-comment:focus {
   border-color: #4d5ae5;
 }
+
 .form-checkbox {
   margin-bottom: 24px;
   display: inline-block;
@@ -757,13 +760,12 @@ textarea::placeholder {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
-
 .span-checkbox {
   margin-right: 8px;
   width: 16px;
-  height: 16px;
+  height: 17px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -847,6 +849,8 @@ textarea::placeholder {
     display: none;
   }
   .hero {
+    padding: 112px 0;
+    max-width: 768px;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
@@ -867,6 +871,8 @@ textarea::placeholder {
     }
   }
   .hero-title {
+    margin-bottom: 36px;
+    font-size: 56px;
     max-width: 496px;
   }
   .benefits-list {
@@ -876,14 +882,20 @@ textarea::placeholder {
     justify-content: center;
     gap: 24px;
     text-align: start;
+    row-gap: 71px;
   }
 
   .benefits-list-item {
     flex-basis: calc((100% - 24px));
     max-width: calc(50% - 12px);
   }
+  .benefits-list-title {
+    text-align: left;
+  }
+
   .team-list {
     gap: 24px;
+    row-gap: 64px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -899,10 +911,14 @@ textarea::placeholder {
   .box {
     width: 356px;
   }
+  .footer {
+    padding-left: 108px;
+  }
   .footer .container {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: 24px;
     row-gap: 72px;
   }
@@ -918,6 +934,9 @@ textarea::placeholder {
   .media-text {
     text-align: left;
   }
+  .subscribe-input {
+    width: 264px;
+  }
   .subscribe-text {
     text-align: left;
   }
@@ -925,8 +944,26 @@ textarea::placeholder {
     flex-direction: row;
     gap: 24px;
   }
+  .backdrop {
+    width: 100%;
+    height: 100%;
+  }
+  .model {
+    width: 408px;
+    min-height: 584px;
+  }
+
+  .input-comment {
+    height: 138px;
+  }
+  .check-text {
+    white-space: nowrap;
+  }
+  .span-checkbox {
+    height: 16px;
+  }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding: 0 15px;
@@ -944,6 +981,8 @@ textarea::placeholder {
     display: none;
   }
   .hero {
+    padding: 188px 0;
+    max-width: 1440px;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
@@ -964,6 +1003,7 @@ textarea::placeholder {
     }
   }
   .hero-title {
+    margin-bottom: 48px;
     max-width: 496px;
   }
   .benefits {
@@ -986,6 +1026,9 @@ textarea::placeholder {
   .benefits-list-item:not(:last-child) {
     margin-bottom: 0px;
   }
+  .benefits-list-title {
+    font-size: 20px;
+  }
 
   .team {
     padding: 120px 0;
@@ -994,10 +1037,9 @@ textarea::placeholder {
     flex-direction: row;
     gap: 24px;
   }
-  .portfolio .container {
-    padding: 0;
+  .portfolio {
+    padding: 120px 0;
   }
-
   .portfolio-item {
     width: calc((100% - 48px) / 3);
     max-width: 360px;
@@ -1010,27 +1052,35 @@ textarea::placeholder {
   .hero {
     padding: 120px 0;
   }
+  .portfolio-item {
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
   .footer {
-    margin-top: 0;
-    margin-bottom: 0;
+    padding: 100px 15px;
   }
   .footer .container {
     display: flex;
-    flex-direction: row;
-    gap: 80px;
-    align-items: flex-start;
-    padding: 100px 0;
+    align-items: baseline;
+    flex-direction: unset;
+    gap: 0;
   }
 
   .logo-text {
     max-width: 264px;
+    margin-right: 120px;
   }
   footer .logo {
     display: inline-block;
-    margin: 0;
-    padding-top: 0;
+    margin-bottom: 16px;
   }
-
+  .media {
+    margin-right: 80px;
+  }
   .media-text {
     text-align: left;
   }
